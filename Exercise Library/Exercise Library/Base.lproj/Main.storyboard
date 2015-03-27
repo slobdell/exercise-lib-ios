@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5ZP-xo-apk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--MuscleBrowseViewController-->
+        <scene sceneID="Y4F-fJ-4Q4">
+            <objects>
+                <tableViewController id="Ssf-L6-aan" customClass="MuscleBrowseTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LN9-jb-VXa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscleTableCell" id="IGY-4n-foo" customClass="MuscleTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IGY-4n-foo" id="cwi-d9-zSe">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk0-UW-dHu">
+                                            <rect key="frame" x="60" y="11" width="201" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="lk0-UW-dHu" id="tBw-bt-Tkc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ssf-L6-aan" id="vut-kZ-hwB"/>
+                            <outlet property="delegate" destination="Ssf-L6-aan" id="WuY-cJ-GCl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MuscleBrowseViewController" id="gaM-fI-H5g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="lt1-ne-GnV">
+                            <connections>
+                                <segue destination="JOI-XI-VIi" kind="push" id="LfK-UX-OF2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oio-1X-MC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="367"/>
+        </scene>
+        <!--Search Table View Controller-->
+        <scene sceneID="9Ai-o2-WSl">
+            <objects>
+                <viewController id="JOI-XI-VIi" customClass="SearchTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZYw-4J-jem"/>
+                        <viewControllerLayoutGuide type="bottom" id="aEx-vS-Om8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Mx-MA-5gE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0Bg-o1-AJi">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-8d-tP7">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableCell" id="hid-8B-6gV" customClass="SearchResultTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hid-8B-6gV" id="LBL-nQ-mtU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SearchResult PlaceHolder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddy-bn-KFx">
+                                                    <rect key="frame" x="24" y="11" width="201" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="ddy-bn-KFx" id="YLj-uZ-OGu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JOI-XI-VIi" id="dTE-Dh-OhS"/>
+                                    <outlet property="delegate" destination="JOI-XI-VIi" id="UEH-ry-qLc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Bg-o1-AJi" firstAttribute="leading" secondItem="9Mx-MA-5gE" secondAttribute="leading" id="BPO-ee-aUN"/>
+                            <constraint firstItem="0Bg-o1-AJi" firstAttribute="top" secondItem="ZYw-4J-jem" secondAttribute="bottom" id="GWH-HO-BaW"/>
+                            <constraint firstItem="aEx-vS-Om8" firstAttribute="top" secondItem="gWp-8d-tP7" secondAttribute="bottom" id="MIw-Sj-BQn"/>
+                            <constraint firstAttribute="trailing" secondItem="gWp-8d-tP7" secondAttribute="trailing" id="VgU-9L-TsG"/>
+                            <constraint firstAttribute="trailing" secondItem="0Bg-o1-AJi" secondAttribute="trailing" id="h0N-Sn-GPS"/>
+                            <constraint firstItem="gWp-8d-tP7" firstAttribute="top" secondItem="0Bg-o1-AJi" secondAttribute="bottom" id="hPf-3U-Ycd"/>
+                            <constraint firstItem="gWp-8d-tP7" firstAttribute="leading" secondItem="9Mx-MA-5gE" secondAttribute="leading" id="oym-VA-Eib"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AuW-w2-5NI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7YY-7g-CuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zz9-Tl-PCw">
+            <objects>
+                <navigationController id="5ZP-xo-apk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IYj-Vs-C7e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ssf-L6-aan" kind="relationship" relationship="rootViewController" id="sDf-se-LaU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxb-Ch-Dlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546" y="367"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
