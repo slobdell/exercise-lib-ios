@@ -15,13 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        var deleteMeClient = ExerciseLibraryClient.sharedInstance
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("nextView") as NextViewController
-        self.presentViewController(nextViewController, animated:true, completion:nil)
-        
+        // Override point for customization after application launch.   
         return true
     }
 

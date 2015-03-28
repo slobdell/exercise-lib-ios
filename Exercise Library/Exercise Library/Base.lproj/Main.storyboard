@@ -8,7 +8,7 @@
         <!--MuscleBrowseViewController-->
         <scene sceneID="Y4F-fJ-4Q4">
             <objects>
-                <tableViewController id="Ssf-L6-aan" customClass="MuscleBrowseTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MuscleBrowseTableViewController" id="Ssf-L6-aan" customClass="MuscleBrowseTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LN9-jb-VXa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,6 +49,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oio-1X-MC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6" y="367"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="cpA-WW-Us1">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cw8-Gf-CY5" customClass="LoadingViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xcw-zg-c2o"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgH-W4-0ri"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Mk-nb-pI1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PW5-yM-7Oh">
+                                <rect key="frame" x="150" y="251" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2T-Oa-BJ7">
+                                <rect key="frame" x="129" y="222" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Network Connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-ko-k3h">
+                                <rect key="frame" x="68" y="130" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-tV-4MT">
+                                <rect key="frame" x="100" y="164" width="121" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.011788656142404319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Cw8-Gf-CY5" eventType="touchUpInside" id="XfJ-RC-H61"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PW5-yM-7Oh" secondAttribute="centerX" id="7Ki-Kj-b0a"/>
+                            <constraint firstAttribute="centerX" secondItem="J2T-Oa-BJ7" secondAttribute="centerX" id="Bm6-vH-3HX"/>
+                            <constraint firstAttribute="centerX" secondItem="1Xw-tV-4MT" secondAttribute="centerX" id="kGi-KY-uFl"/>
+                            <constraint firstAttribute="centerX" secondItem="Pho-ko-k3h" secondAttribute="centerX" id="lRC-gD-Kvm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="J2T-Oa-BJ7" id="FkD-fG-8JL"/>
+                        <outlet property="networkConnectionLabel" destination="Pho-ko-k3h" id="3Zv-QD-TMk"/>
+                        <outlet property="retryButton" destination="1Xw-tV-4MT" id="4bO-uC-xe4"/>
+                        <outlet property="spinner" destination="PW5-yM-7Oh" id="FjR-yw-vhi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaT-ee-KlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546" y="1010"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="9Ai-o2-WSl">
@@ -115,7 +173,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zz9-Tl-PCw">
             <objects>
-                <navigationController id="5ZP-xo-apk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5ZP-xo-apk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IYj-Vs-C7e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

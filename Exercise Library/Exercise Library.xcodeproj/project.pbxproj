@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		693328EF1AC5F45A0008895D /* ExerciseLibraryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693328EE1AC5F45A0008895D /* ExerciseLibraryClient.swift */; };
+		696561351AC60D5500870163 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696561341AC60D5500870163 /* LoadingViewController.swift */; };
 		698547B01AC5E3B600394DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698547AF1AC5E3B600394DCD /* AppDelegate.swift */; };
 		698547B51AC5E3B600394DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698547B31AC5E3B600394DCD /* Main.storyboard */; };
 		698547B71AC5E3B600394DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698547B61AC5E3B600394DCD /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		62E8CC61154277D638BFAC7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		693328EE1AC5F45A0008895D /* ExerciseLibraryClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseLibraryClient.swift; sourceTree = "<group>"; };
 		693328F01AC5F4EC0008895D /* BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		696561341AC60D5500870163 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		698547AA1AC5E3B600394DCD /* Exercise Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		698547AE1AC5E3B600394DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		698547AF1AC5E3B600394DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				698547D11AC5E58600394DCD /* MuscleBrowseTableViewController.swift */,
 				69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */,
+				696561341AC60D5500870163 /* LoadingViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696561351AC60D5500870163 /* LoadingViewController.swift in Sources */,
 				698547D41AC5E5EE00394DCD /* MuscleTableViewCell.swift in Sources */,
 				698547D21AC5E58600394DCD /* MuscleBrowseTableViewController.swift in Sources */,
 				69F44E2A1AC5EE85003B7832 /* SearchTableViewController.swift in Sources */,

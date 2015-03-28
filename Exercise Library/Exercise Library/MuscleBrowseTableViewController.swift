@@ -11,9 +11,28 @@ import UIKit
 class MuscleBrowseTableViewController: UITableViewController {
     
     var junkItems = ["item1", "item2", "item3", "item4"]
+    var muscleArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var beginLoadingClient = ExerciseLibraryClient.sharedInstance
+        if(!beginLoadingClient.initialized){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("LoadingViewController") as LoadingViewController
+            self.presentViewController(nextViewController, animated:true, completion:nil)
+        } else {
+            self.muscleArray = beginLoadingClient.allData["muscle_groups"] as NSArray
+            println(self.muscleArray.count)
+            /// var something: NSDictionary = beginLoadingClient.allData
+        }
+        
+
+        /*
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(“LoginViewController”) as UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        */
 
     }
 

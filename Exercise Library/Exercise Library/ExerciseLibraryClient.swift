@@ -15,9 +15,10 @@ class ExerciseLibraryClient {
     var accessToken: String!
     var accessSecret: String!
     var allData: NSDictionary = NSDictionary()
+    var initialized: Bool = false
     
     init() {
-        self.fetch()
+        self.initialized = false
     }
     
     class var sharedInstance: ExerciseLibraryClient {
@@ -25,7 +26,8 @@ class ExerciseLibraryClient {
     }
 
     // func fetch(callback: (a: Int) -> Void){
-    func fetch() {
+    func fetch(callback: () -> Void, errback: () -> Void) {
+        println("fetching")
         let manager = AFHTTPRequestOperationManager()
         manager.GET(
             "http://www.exercise-library.com/api/exercises/",
@@ -33,12 +35,14 @@ class ExerciseLibraryClient {
             success: { (operation: AFHTTPRequestOperation!,
                 responseObject: AnyObject!) in
                 self.allData = responseObject as NSDictionary
+                self.initialized = true
+                callback()
             },
             failure: { (operation: AFHTTPRequestOperation!,
                 error: NSError!) in
                 println("Error: " + error.localizedDescription)
+                errback()
             }
         )
     }
-    
 }
