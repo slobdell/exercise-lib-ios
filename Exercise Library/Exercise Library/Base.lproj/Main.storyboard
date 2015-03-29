@@ -22,7 +22,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk5-Rb-tFy">
                                             <rect key="frame" x="21" y="8" width="151" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -38,11 +38,17 @@
                             <outlet property="delegate" destination="95q-PV-1PH" id="l6j-oj-KMa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="IntermediateViewController" id="oxM-GM-0jz"/>
+                    <navigationItem key="navigationItem" title="IntermediateViewController" id="oxM-GM-0jz">
+                        <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="3cY-20-aiC">
+                            <connections>
+                                <segue destination="JOI-XI-VIi" kind="push" id="eaz-F2-l6P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mp-V0-zFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="-320"/>
+            <point key="canvasLocation" x="495" y="-320"/>
         </scene>
         <!--FinalMuscleViewController-->
         <scene sceneID="RAX-a6-3hF">
@@ -53,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscle3TableCell" id="3Pg-Gx-CBG" customClass="Muscle3TableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="muscle3TableCell" id="3Pg-Gx-CBG" customClass="Muscle3TableViewCell" customModule="Exercise_Library" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Pg-Gx-CBG" id="Bij-fO-T1K">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -61,13 +67,14 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-5T-f0H">
                                             <rect key="frame" x="36" y="11" width="151" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="z0s-5T-f0H" id="t20-Xf-AEb"/>
+                                    <segue destination="SZP-jF-6sa" kind="push" id="X3l-0S-pqO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,11 +83,64 @@
                             <outlet property="delegate" destination="ykg-u5-veW" id="psL-NW-h0h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FinalMuscleViewController" id="CDz-v0-Oqy"/>
+                    <navigationItem key="navigationItem" title="FinalMuscleViewController" id="CDz-v0-Oqy">
+                        <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="V1w-MD-gad">
+                            <connections>
+                                <segue destination="JOI-XI-VIi" kind="push" id="1aO-S0-nbo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEG-q0-8OI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-320"/>
+            <point key="canvasLocation" x="960" y="-320"/>
+        </scene>
+        <!--Final Filter-->
+        <scene sceneID="TD5-am-gSr">
+            <objects>
+                <viewController id="SZP-jF-6sa" customClass="FilterViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ocJ-HF-ZbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="I7S-b0-ZHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fTS-Nd-SmX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-0b-qzE">
+                                <rect key="frame" x="99" y="90" width="133" height="29"/>
+                                <segments>
+                                    <segment title="Strength"/>
+                                    <segment title="Stretch"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-yx-c8G">
+                                <rect key="frame" x="0.0" y="128" width="320" height="440"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VL2-yx-c8G" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" id="Dgl-e7-sfz"/>
+                            <constraint firstAttribute="trailing" secondItem="GYi-0b-qzE" secondAttribute="trailing" constant="88" id="HwH-Oz-z55"/>
+                            <constraint firstAttribute="trailing" secondItem="VL2-yx-c8G" secondAttribute="trailing" id="JWQ-IH-aMx"/>
+                            <constraint firstItem="VL2-yx-c8G" firstAttribute="top" secondItem="GYi-0b-qzE" secondAttribute="bottom" constant="10" id="fTj-o1-auU"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" constant="99" id="pyt-Xg-Nve"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="top" secondItem="ocJ-HF-ZbD" secondAttribute="bottom" constant="26" id="rwz-31-Ybz"/>
+                            <constraint firstItem="I7S-b0-ZHl" firstAttribute="top" secondItem="VL2-yx-c8G" secondAttribute="bottom" id="y7y-Ej-FxE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Final Filter" id="gM9-YP-iKx">
+                        <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="qve-if-bcx">
+                            <connections>
+                                <segue destination="JOI-XI-VIi" kind="push" id="Nzz-7E-Nmh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmw-d9-twu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="-320"/>
         </scene>
         <!--MuscleBrowseViewController-->
         <scene sceneID="Y4F-fJ-4Q4">
@@ -100,7 +160,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk0-UW-dHu">
                                             <rect key="frame" x="60" y="11" width="201" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -117,7 +177,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MuscleBrowseViewController" id="gaM-fI-H5g">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="lt1-ne-GnV">
+                        <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="lt1-ne-GnV">
                             <connections>
                                 <segue destination="JOI-XI-VIi" kind="push" id="LfK-UX-OF2"/>
                             </connections>
@@ -146,13 +206,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2T-Oa-BJ7">
                                 <rect key="frame" x="129" y="222" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Network Connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-ko-k3h">
                                 <rect key="frame" x="68" y="130" width="185" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-tV-4MT">
@@ -215,7 +275,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SearchResult PlaceHolder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddy-bn-KFx">
                                                     <rect key="frame" x="24" y="11" width="201" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -270,4 +330,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nzz-7E-Nmh"/>
+    </inferredMetricsTieBreakers>
 </document>

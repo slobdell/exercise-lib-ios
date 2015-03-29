@@ -12,13 +12,6 @@ class IntermediateTableViewController: UITableViewController {
     var muscleTree = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(self.muscleTree.count)
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,12 +43,17 @@ class IntermediateTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         
-        var destinationViewController:FinalTableViewController = segue.destinationViewController as FinalTableViewController
-        
-        var view = self.view as UITableView
-        var index = view.indexPathForSelectedRow()?.row
-        let muscleList = self.muscleTree[index!][1] as NSArray
-        destinationViewController.muscleTree = muscleList
+
+        if(sender.tag == 99){
+            super.prepareForSegue(segue, sender: sender)
+        } else {
+            var destinationViewController:FinalTableViewController = segue.destinationViewController as FinalTableViewController
+            
+            var view = self.view as UITableView
+            var index = view.indexPathForSelectedRow()?.row
+            let muscleList = self.muscleTree[index!][1] as NSArray
+            destinationViewController.muscleTree = muscleList
+        }
 
     }
 

@@ -25,8 +25,6 @@ class MuscleBrowseTableViewController: UITableViewController {
             self.presentViewController(nextViewController, animated:true, completion:nil)
         } else {
             self.muscleTree = beginLoadingClient.allData["muscle_tree"] as NSArray
-            println(self.muscleTree.count)
-            /// var something: NSDictionary = beginLoadingClient.allData
         }
         
 
@@ -68,12 +66,16 @@ class MuscleBrowseTableViewController: UITableViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        var destinationViewController:IntermediateTableViewController = segue.destinationViewController as IntermediateTableViewController
-        
-        var view = self.view as UITableView
-        var index = view.indexPathForSelectedRow()?.row
-        let muscleList = self.muscleTree[index!][1] as NSArray
+
+        if(sender.tag == 99){
+            super.prepareForSegue(segue, sender: sender)
+        } else {
+            var destinationViewController:IntermediateTableViewController = segue.destinationViewController as IntermediateTableViewController
+            var view = self.view as UITableView
+            var index = view.indexPathForSelectedRow()?.row
+            let muscleList = self.muscleTree[index!][1] as NSArray
         destinationViewController.muscleTree = muscleList
+        }
     }
     
     
