@@ -11,7 +11,9 @@ import UIKit
 class MuscleBrowseTableViewController: UITableViewController {
     
     var junkItems = ["item1", "item2", "item3", "item4"]
-    var muscleArray = []
+    var muscleTree = []
+    
+    var muscleArray = [] // SBL left off here need to actually set an item here.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,8 @@ class MuscleBrowseTableViewController: UITableViewController {
             let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("LoadingViewController") as LoadingViewController
             self.presentViewController(nextViewController, animated:true, completion:nil)
         } else {
-            self.muscleArray = beginLoadingClient.allData["muscle_groups"] as NSArray
-            println(self.muscleArray.count)
+            self.muscleTree = beginLoadingClient.allData["muscle_tree"] as NSArray
+            println(self.muscleTree.count)
             /// var something: NSDictionary = beginLoadingClient.allData
         }
         
@@ -52,14 +54,15 @@ class MuscleBrowseTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.junkItems.count
+        return self.muscleTree.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("muscleTableCell", forIndexPath: indexPath) as MuscleTableViewCell
-        cell.configure(junkItems[indexPath.row])
+        
+        cell.configure(self.muscleTree[indexPath.row] as NSArray)
 
         return cell
     }

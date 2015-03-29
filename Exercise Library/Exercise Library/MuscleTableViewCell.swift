@@ -22,8 +22,9 @@ class MuscleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(result: NSDictionary){
-        println("Npo")
+    func configure(result: NSArray){
+        let muscleName = result[0] as NSString
+        self.label.text = muscleName
     }
     
     func configure(result: NSString){
