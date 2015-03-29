@@ -66,6 +66,16 @@ class MuscleBrowseTableViewController: UITableViewController {
 
         return cell
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var destinationViewController:IntermediateTableViewController = segue.destinationViewController as IntermediateTableViewController
+        
+        var view = self.view as UITableView
+        var index = view.indexPathForSelectedRow()?.row
+        let muscleList = self.muscleTree[index!][1] as NSArray
+        destinationViewController.muscleTree = muscleList
+    }
+    
     
 
 

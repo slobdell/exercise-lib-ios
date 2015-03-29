@@ -5,6 +5,83 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
+        <!--IntermediateViewController-->
+        <scene sceneID="asF-hI-wS4">
+            <objects>
+                <tableViewController id="95q-PV-1PH" customClass="IntermediateTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IQA-7t-hC4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="muscle2TableCell" id="iNf-hq-gkf" customClass="Muscle2TableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iNf-hq-gkf" id="b1i-rS-A2z">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk5-Rb-tFy">
+                                            <rect key="frame" x="21" y="8" width="151" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="vk5-Rb-tFy" id="xTe-v4-v0g"/>
+                                    <segue destination="ykg-u5-veW" kind="push" id="Hfz-d9-RfD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="95q-PV-1PH" id="jlb-8a-ImN"/>
+                            <outlet property="delegate" destination="95q-PV-1PH" id="l6j-oj-KMa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="IntermediateViewController" id="oxM-GM-0jz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mp-V0-zFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="-320"/>
+        </scene>
+        <!--FinalMuscleViewController-->
+        <scene sceneID="RAX-a6-3hF">
+            <objects>
+                <tableViewController id="ykg-u5-veW" customClass="FinalTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SqM-2P-30d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscle3TableCell" id="3Pg-Gx-CBG" customClass="Muscle3TableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Pg-Gx-CBG" id="Bij-fO-T1K">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-5T-f0H">
+                                            <rect key="frame" x="36" y="11" width="151" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="z0s-5T-f0H" id="t20-Xf-AEb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ykg-u5-veW" id="X0C-o9-lzI"/>
+                            <outlet property="delegate" destination="ykg-u5-veW" id="psL-NW-h0h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="FinalMuscleViewController" id="CDz-v0-Oqy"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEG-q0-8OI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="-320"/>
+        </scene>
         <!--MuscleBrowseViewController-->
         <scene sceneID="Y4F-fJ-4Q4">
             <objects>
@@ -14,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscleTableCell" id="IGY-4n-foo" customClass="MuscleTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="muscleTableCell" id="IGY-4n-foo" customClass="MuscleTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IGY-4n-foo" id="cwi-d9-zSe">
@@ -30,6 +107,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="lk0-UW-dHu" id="tBw-bt-Tkc"/>
+                                    <segue destination="95q-PV-1PH" kind="push" id="1Oz-Dz-7j6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
