@@ -9,9 +9,12 @@
 import UIKit
 
 class FilterViewController: UIViewController {
+    
+    var muscleId:Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(self.muscleId)
 
         // Do any additional setup after loading the view.
     }
