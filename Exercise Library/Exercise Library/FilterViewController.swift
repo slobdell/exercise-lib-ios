@@ -12,11 +12,33 @@ class FilterViewController: UIViewController {
     
     var muscleId:Int = -1
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        println(self.muscleId)
+    var baseMuscleList: [NSDictionary] = []
 
-        // Do any additional setup after loading the view.
+
+    @IBOutlet weak var exerciseTypeFilter: UISegmentedControl!
+    override func viewDidLoad() {
+        exerciseTypeFilter.removeAllSegments()
+        var client = ExerciseLibraryClient.sharedInstance
+        var exerciseTypes = client.allData["exercise_types"] as NSArray
+        
+        for exerciseTypeDict in exerciseTypes{
+            var exerciseTypeDict = exerciseTypeDict as NSDictionary
+            var id = exerciseTypeDict["id"] as Int
+            var title = exerciseTypeDict["title"] as NSString
+            exerciseTypeFilter.insertSegmentWithTitle(title, atIndex: id, animated: true)
+        }
+        
+        self.baseMuscleList = [] // SBL not sure if this is necessary
+        for exercise in client.allData["exercises"] as NSArray{
+            var exercise = exercise as NSDictionary
+            if(exercise["muscle_group_id"] as Int == self.muscleId){
+                self.baseMuscleList.append(exercise)
+            }
+        }
+        
+        super.viewDidLoad()
+    }
+    @IBAction func exerciseTypeChanged(sender: UISegmentedControl) {
     }
 
     override func didReceiveMemoryWarning() {

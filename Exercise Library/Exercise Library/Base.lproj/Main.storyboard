@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--IntermediateViewController-->
@@ -107,12 +108,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-0b-qzE">
-                                <rect key="frame" x="99" y="90" width="133" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-0b-qzE">
+                                <rect key="frame" x="16" y="90" width="288" height="29"/>
                                 <segments>
                                     <segment title="Strength"/>
                                     <segment title="Stretch"/>
                                 </segments>
+                                <connections>
+                                    <action selector="exerciseTypeChanged:" destination="SZP-jF-6sa" eventType="valueChanged" id="YVR-rt-EHn"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-yx-c8G">
                                 <rect key="frame" x="0.0" y="128" width="320" height="440"/>
@@ -121,10 +125,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="top" secondItem="ocJ-HF-ZbD" secondAttribute="bottom" constant="10" id="5mm-AP-WpH"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="top" secondItem="ocJ-HF-ZbD" secondAttribute="bottom" constant="10" id="6b6-hv-JhG"/>
                             <constraint firstItem="VL2-yx-c8G" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" id="Dgl-e7-sfz"/>
+                            <constraint firstAttribute="trailing" secondItem="GYi-0b-qzE" secondAttribute="trailing" id="EJz-fD-ogp"/>
                             <constraint firstAttribute="trailing" secondItem="GYi-0b-qzE" secondAttribute="trailing" constant="88" id="HwH-Oz-z55"/>
                             <constraint firstAttribute="trailing" secondItem="VL2-yx-c8G" secondAttribute="trailing" id="JWQ-IH-aMx"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" id="LlR-iG-A8S"/>
                             <constraint firstItem="VL2-yx-c8G" firstAttribute="top" secondItem="GYi-0b-qzE" secondAttribute="bottom" constant="10" id="fTj-o1-auU"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leadingMargin" id="mTs-uH-0nU"/>
+                            <constraint firstItem="GYi-0b-qzE" firstAttribute="trailing" secondItem="fTS-Nd-SmX" secondAttribute="trailingMargin" id="mh9-aQ-HMg"/>
                             <constraint firstItem="GYi-0b-qzE" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" constant="99" id="pyt-Xg-Nve"/>
                             <constraint firstItem="GYi-0b-qzE" firstAttribute="top" secondItem="ocJ-HF-ZbD" secondAttribute="bottom" constant="26" id="rwz-31-Ybz"/>
                             <constraint firstItem="I7S-b0-ZHl" firstAttribute="top" secondItem="VL2-yx-c8G" secondAttribute="bottom" id="y7y-Ej-FxE"/>
@@ -137,6 +147,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="exerciseTypeFilter" destination="GYi-0b-qzE" id="dGT-tB-Wj1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmw-d9-twu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
