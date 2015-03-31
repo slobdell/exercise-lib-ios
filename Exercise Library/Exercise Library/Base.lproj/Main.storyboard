@@ -134,9 +134,15 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6P-7O-S71">
+                                                    <rect key="frame" x="210" y="3" width="100" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imagePreview" destination="0kA-5L-q5P" id="yqP-Uo-CU7"/>
+                                            <outlet property="imageThumbnail" destination="S6P-7O-S71" id="TNO-TN-d0F"/>
                                             <outlet property="label" destination="Uhq-Fn-Hwh" id="tnA-cM-42G"/>
                                         </connections>
                                     </tableViewCell>
@@ -173,11 +179,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="exerciseTypeFilter" destination="GYi-0b-qzE" id="dGT-tB-Wj1"/>
+                        <outlet property="tableView" destination="VL2-yx-c8G" id="neo-QK-6Jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmw-d9-twu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="-321"/>
+            <point key="canvasLocation" x="1464" y="-324"/>
         </scene>
         <!--MuscleBrowseViewController-->
         <scene sceneID="Y4F-fJ-4Q4">

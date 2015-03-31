@@ -16,6 +16,7 @@ class FilterViewController: UIViewController {
     var viewableList: [NSDictionary] = []
 
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerciseTypeFilter: UISegmentedControl!
     override func viewDidLoad() {
         exerciseTypeFilter.removeAllSegments()
@@ -86,7 +87,7 @@ class FilterViewController: UIViewController {
         }
         self.viewableList = filteredList
         println(self.viewableList.count)
-        //self.tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     @IBAction func exerciseTypeChanged(sender: UISegmentedControl) {
@@ -123,3 +124,4 @@ class FilterViewController: UIViewController {
 
 
 }
+
