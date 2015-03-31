@@ -113,10 +113,8 @@ class FilterViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("exerciseTableViewCell", forIndexPath: indexPath) as ExerciseTableViewCell
         cell.configure(self.viewableList[indexPath.row])
-        
         return cell
     }
     
