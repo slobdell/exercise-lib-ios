@@ -118,6 +118,20 @@ class FilterViewController: UIViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if(sender.tag == 99){
+            super.prepareForSegue(segue, sender: sender)
+        } else {            
+            var destinationViewController:ExerciseViewController = segue.destinationViewController as ExerciseViewController
+            var view = self.tableView as UITableView
+            var index = view.indexPathForSelectedRow()?.row
+            var exerciseDict = self.viewableList[index!] as NSDictionary
+            destinationViewController.exercise = exerciseDict
+
+
+        }
+        
+    }
 
 
 

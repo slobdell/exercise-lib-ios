@@ -122,7 +122,7 @@
                                 <rect key="frame" x="0.0" y="128" width="320" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseTableViewCell" id="5zj-fU-ZB5" customClass="ExerciseTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exerciseTableViewCell" id="5zj-fU-ZB5" customClass="ExerciseTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5zj-fU-ZB5" id="0kA-5L-q5P">
@@ -144,6 +144,7 @@
                                             <outlet property="imagePreview" destination="0kA-5L-q5P" id="yqP-Uo-CU7"/>
                                             <outlet property="imageThumbnail" destination="S6P-7O-S71" id="TNO-TN-d0F"/>
                                             <outlet property="label" destination="Uhq-Fn-Hwh" id="tnA-cM-42G"/>
+                                            <segue destination="cgH-g5-9ky" kind="push" id="RoX-2e-a9Y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -185,6 +186,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmw-d9-twu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1464" y="-326"/>
+        </scene>
+        <!--Exercise-->
+        <scene sceneID="Ny9-A3-zep">
+            <objects>
+                <viewController id="cgH-g5-9ky" customClass="ExerciseViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cAt-ng-uWv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lXd-O1-Wm2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sY0-il-ptH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHu-vg-bYk">
+                                <rect key="frame" x="16" y="89" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9L-jx-gko">
+                                <rect key="frame" x="10" y="145" width="300" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="C4K-vk-JWU"/>
+                                    <constraint firstAttribute="height" constant="200" id="S8v-jo-g06"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BHu-vg-bYk" secondAttribute="centerX" id="3uX-1u-asv"/>
+                            <constraint firstItem="BHu-vg-bYk" firstAttribute="top" secondItem="cAt-ng-uWv" secondAttribute="bottom" constant="25" id="9as-YG-cFa"/>
+                            <constraint firstAttribute="centerX" secondItem="V9L-jx-gko" secondAttribute="centerX" id="HqW-X4-9qB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BHu-vg-bYk" secondAttribute="trailing" id="MNE-4I-MEr"/>
+                            <constraint firstItem="BHu-vg-bYk" firstAttribute="leading" secondItem="sY0-il-ptH" secondAttribute="leadingMargin" id="bUI-g7-ymn"/>
+                            <constraint firstItem="V9L-jx-gko" firstAttribute="top" secondItem="BHu-vg-bYk" secondAttribute="bottom" constant="35" id="xhF-p3-jBX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Exercise" id="p6o-ep-UVS"/>
+                    <connections>
+                        <outlet property="label" destination="BHu-vg-bYk" id="HIN-bj-udN"/>
+                        <outlet property="viewContainer" destination="V9L-jx-gko" id="87C-rs-piL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxa-pv-Xur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1995" y="-320"/>
         </scene>
         <!--MuscleBrowseViewController-->
         <scene sceneID="Y4F-fJ-4Q4">
