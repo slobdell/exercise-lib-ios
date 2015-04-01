@@ -11,6 +11,7 @@ import MediaPlayer
 
 class ExerciseViewController: UIViewController {
 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var label: UILabel!
     var exercise:NSDictionary = NSDictionary()
     var moviePlayer:MPMoviePlayerController!
@@ -18,10 +19,17 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var viewContainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinner.hidden = false
+        spinner.startAnimating()
+
         self.label.text = exercise["name"] as NSString
         // video ID
         // https://s3-us-west-1.amazonaws.com/workout-generator-exercises/smaller_mp4/small_XXXX.mp4
         // Do any additional setup after loading the view.
+        var superHack:NSString? = exercise["video_id"] as? NSString
+        if(superHack == nil){
+            return
+        }
         var videoId = exercise["video_id"] as NSString
         var urlString:NSString = "https://s3-us-west-1.amazonaws.com/workout-generator-exercises/smaller_mp4/small_\(videoId).mp4"
         var url:NSURL? = NSURL(string: urlString)
@@ -37,7 +45,17 @@ class ExerciseViewController: UIViewController {
         moviePlayer.controlStyle = MPMovieControlStyle.Embedded
         moviePlayer.play()
 
-        println("FINISHED")
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "movieFinishedCallback",
+            name: "MPMoviePlayerNowPlayingMovieDidChangeNotification",
+            object: self.moviePlayer)
+
+
+    }
+    func movieFinishedCallback(){
+        spinner.hidden = true
     }
 
     override func didReceiveMemoryWarning() {

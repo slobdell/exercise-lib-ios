@@ -23,6 +23,7 @@
 		69C8FE751AC8992A00B5767F /* FinalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8FE741AC8992A00B5767F /* FinalTableViewController.swift */; };
 		69C8FE771AC899E600B5767F /* Muscle3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8FE761AC899E600B5767F /* Muscle3TableViewCell.swift */; };
 		69DDF38B1ACB656300701A72 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDF38A1ACB656300701A72 /* ExerciseViewController.swift */; };
+		69DDF38E1ACC3DA000701A72 /* exerciselibcropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */; };
 		69F44E281AC5EDDC003B7832 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F44E271AC5EDDC003B7832 /* SearchResultTableViewCell.swift */; };
 		69F44E2A1AC5EE85003B7832 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */; };
 		7FA08E396606A0D83D80FC89 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8EC57F08583B1B55BC9074 /* libPods.a */; };
@@ -62,6 +63,7 @@
 		69C8FE741AC8992A00B5767F /* FinalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalTableViewController.swift; sourceTree = "<group>"; };
 		69C8FE761AC899E600B5767F /* Muscle3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle3TableViewCell.swift; sourceTree = "<group>"; };
 		69DDF38A1ACB656300701A72 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exerciselibcropped.png; path = ../../../../Dropbox/WorkoutGen_Stuff/logos/exerciselibcropped.png; sourceTree = "<group>"; };
 		69F44E271AC5EDDC003B7832 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		6C8EC57F08583B1B55BC9074 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 		698547AC1AC5E3B600394DCD /* Exercise Library */ = {
 			isa = PBXGroup;
 			children = (
+				69DDF38C1ACC3D8100701A72 /* images */,
 				693328ED1AC5F4350008895D /* API */,
 				698547D01AC5E41900394DCD /* Views */,
 				698547CF1AC5E3F400394DCD /* ViewControllers */,
@@ -179,6 +182,14 @@
 				695F4F121AC8AAA800F14D75 /* ExerciseTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		69DDF38C1ACC3D8100701A72 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		6E9CBF07F894E643461ADF80 /* Pods */ = {
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				698547B51AC5E3B600394DCD /* Main.storyboard in Resources */,
+				69DDF38E1ACC3DA000701A72 /* exerciselibcropped.png in Resources */,
 				698547BA1AC5E3B600394DCD /* LaunchScreen.xib in Resources */,
 				698547B71AC5E3B600394DCD /* Images.xcassets in Resources */,
 			);

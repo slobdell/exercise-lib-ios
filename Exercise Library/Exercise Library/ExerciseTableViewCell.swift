@@ -28,7 +28,11 @@ class ExerciseTableViewCell: UITableViewCell {
         let muscleName = result["name"] as NSString
 
         self.label.text = muscleName
-
+        self.imageThumbnail.image = nil
+        self.imageThumbnail.backgroundColor = UIColor.lightGrayColor()
+        imageThumbnail.layer.cornerRadius = imageThumbnail.frame.size.width / 2;
+        imageThumbnail.layer.masksToBounds = true;
+        
         var dirtyHack = result["video_id"] as? NSString
         if(dirtyHack == nil){
             //videoId is null...can't figure out how to make this work as expected

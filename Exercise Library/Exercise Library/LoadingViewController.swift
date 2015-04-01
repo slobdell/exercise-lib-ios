@@ -38,7 +38,7 @@ class LoadingViewController: UIViewController {
     
     func continueFlow() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("NavigationController") as UIViewController
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as UIViewController
         self.presentViewController(nextViewController, animated:true, completion:nil)
     }
     

@@ -19,10 +19,11 @@ class MuscleBrowseTableViewController: UITableViewController {
         super.viewDidLoad()
         
         var beginLoadingClient = ExerciseLibraryClient.sharedInstance
-        if(!beginLoadingClient.initialized){
+        if(!beginLoadingClient.initialized){            
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("LoadingViewController") as LoadingViewController
             self.presentViewController(nextViewController, animated:true, completion:nil)
+
         } else {
             self.muscleTree = beginLoadingClient.allData["muscle_tree"] as NSArray
         }
