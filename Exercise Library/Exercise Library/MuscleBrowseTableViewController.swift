@@ -75,7 +75,9 @@ class MuscleBrowseTableViewController: UITableViewController {
             var view = self.view as UITableView
             var index = view.indexPathForSelectedRow()?.row
             let muscleList = self.muscleTree[index!][1] as NSArray
-        destinationViewController.muscleTree = muscleList
+            let muscleName = self.muscleTree[index!][0] as NSString
+            destinationViewController.muscleTree = muscleList
+            destinationViewController.muscleName = muscleName
         }
     }
     

@@ -11,6 +11,7 @@ import UIKit
 class FilterViewController: UIViewController {
     
     var muscleId:Int = -1
+    var muscleName:NSString = ""
 
     var baseMuscleList: [NSDictionary] = []
     var viewableList: [NSDictionary] = []
@@ -20,6 +21,7 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var exerciseTypeFilter: UISegmentedControl!
     override func viewDidLoad() {
         self.buildExerciseList()
+        self.title = self.muscleName
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,

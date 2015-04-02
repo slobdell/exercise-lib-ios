@@ -10,8 +10,10 @@ import UIKit
 
 class IntermediateTableViewController: UITableViewController {
     var muscleTree = []
+    var muscleName:NSString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = muscleName
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +54,9 @@ class IntermediateTableViewController: UITableViewController {
             var view = self.view as UITableView
             var index = view.indexPathForSelectedRow()?.row
             let muscleList = self.muscleTree[index!][1] as NSArray
+            let muscleName = self.muscleTree[index!][0] as NSString
             destinationViewController.muscleTree = muscleList
+            destinationViewController.muscleName = muscleName
         }
 
     }

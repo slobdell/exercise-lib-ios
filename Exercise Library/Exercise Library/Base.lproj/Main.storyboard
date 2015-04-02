@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--IntermediateViewController-->
+        <!--Browse-->
         <scene sceneID="asF-hI-wS4">
             <objects>
                 <tableViewController id="95q-PV-1PH" customClass="IntermediateTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk5-Rb-tFy">
-                                            <rect key="frame" x="21" y="8" width="151" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="151" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="95q-PV-1PH" id="l6j-oj-KMa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="IntermediateViewController" id="oxM-GM-0jz">
+                    <navigationItem key="navigationItem" title="Browse" id="oxM-GM-0jz">
                         <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="3cY-20-aiC">
                             <connections>
                                 <segue destination="JOI-XI-VIi" kind="push" id="eaz-F2-l6P"/>
@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="495" y="-320"/>
         </scene>
-        <!--FinalMuscleViewController-->
+        <!--Browse-->
         <scene sceneID="RAX-a6-3hF">
             <objects>
                 <tableViewController id="ykg-u5-veW" customClass="FinalTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-5T-f0H">
-                                            <rect key="frame" x="36" y="11" width="151" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="151" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                             <outlet property="delegate" destination="ykg-u5-veW" id="psL-NW-h0h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FinalMuscleViewController" id="CDz-v0-Oqy">
+                    <navigationItem key="navigationItem" title="Browse" id="CDz-v0-Oqy">
                         <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="V1w-MD-gad">
                             <connections>
                                 <segue destination="JOI-XI-VIi" kind="push" id="1aO-S0-nbo"/>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="960" y="-320"/>
         </scene>
-        <!--Final Filter-->
+        <!--Browse-->
         <scene sceneID="TD5-am-gSr">
             <objects>
                 <viewController id="SZP-jF-6sa" customClass="FilterViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,7 +165,7 @@
                             <constraint firstItem="I7S-b0-ZHl" firstAttribute="top" secondItem="VL2-yx-c8G" secondAttribute="bottom" id="y7y-Ej-FxE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Final Filter" id="gM9-YP-iKx">
+                    <navigationItem key="navigationItem" title="Browse" id="gM9-YP-iKx">
                         <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="qve-if-bcx">
                             <connections>
                                 <segue destination="JOI-XI-VIi" kind="push" id="Nzz-7E-Nmh"/>
@@ -232,9 +232,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dxa-pv-Xur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995" y="-320"/>
+            <point key="canvasLocation" x="1492" y="375"/>
         </scene>
-        <!--MuscleBrowseViewController-->
+        <!--Browse-->
         <scene sceneID="Y4F-fJ-4Q4">
             <objects>
                 <tableViewController storyboardIdentifier="MuscleBrowseTableViewController" id="Ssf-L6-aan" customClass="MuscleBrowseTableViewController" customModule="Exercise_Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,7 +250,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder Muscle Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk0-UW-dHu">
-                                            <rect key="frame" x="60" y="11" width="201" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="201" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -268,7 +268,7 @@
                             <outlet property="delegate" destination="Ssf-L6-aan" id="WuY-cJ-GCl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MuscleBrowseViewController" id="gaM-fI-H5g">
+                    <navigationItem key="navigationItem" title="Browse" id="gaM-fI-H5g">
                         <barButtonItem key="rightBarButtonItem" tag="99" systemItem="search" id="lt1-ne-GnV">
                             <connections>
                                 <segue destination="JOI-XI-VIi" kind="push" id="LfK-UX-OF2"/>
@@ -353,27 +353,42 @@
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Bg-o1-AJi">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JOI-XI-VIi" id="BqL-ai-TvE"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gWp-8d-tP7">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableCell" id="hid-8B-6gV" customClass="SearchResultTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searchTableCell" id="hid-8B-6gV" customClass="SearchResultTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hid-8B-6gV" id="LBL-nQ-mtU">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-wQ-Itj">
+                                                    <rect key="frame" x="5" y="0.0" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="8Ex-Gf-cLK"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Lx7-Uw-LED"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SearchResult PlaceHolder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddy-bn-KFx">
-                                                    <rect key="frame" x="24" y="11" width="201" height="21"/>
+                                                    <rect key="frame" x="53" y="11" width="201" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QwE-wQ-Itj" firstAttribute="leading" secondItem="LBL-nQ-mtU" secondAttribute="leading" constant="5" id="Wzc-Gv-K5N"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageThumbnail" destination="QwE-wQ-Itj" id="Hla-XY-hEd"/>
                                             <outlet property="label" destination="ddy-bn-KFx" id="YLj-uZ-OGu"/>
+                                            <segue destination="cgH-g5-9ky" kind="push" id="RoJ-QH-aup"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -382,13 +397,18 @@
                                     <outlet property="delegate" destination="JOI-XI-VIi" id="UEH-ry-qLc"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-ZH-EgI">
+                                <rect key="frame" x="150" y="113" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ABE-ZH-EgI" secondAttribute="centerX" id="8p1-2f-Ufa"/>
                             <constraint firstItem="0Bg-o1-AJi" firstAttribute="leading" secondItem="9Mx-MA-5gE" secondAttribute="leading" id="BPO-ee-aUN"/>
                             <constraint firstItem="0Bg-o1-AJi" firstAttribute="top" secondItem="ZYw-4J-jem" secondAttribute="bottom" id="GWH-HO-BaW"/>
                             <constraint firstItem="aEx-vS-Om8" firstAttribute="top" secondItem="gWp-8d-tP7" secondAttribute="bottom" id="MIw-Sj-BQn"/>
                             <constraint firstAttribute="trailing" secondItem="gWp-8d-tP7" secondAttribute="trailing" id="VgU-9L-TsG"/>
+                            <constraint firstItem="ABE-ZH-EgI" firstAttribute="top" secondItem="0Bg-o1-AJi" secondAttribute="bottom" constant="5" id="W5u-Bq-uZX"/>
                             <constraint firstAttribute="trailing" secondItem="0Bg-o1-AJi" secondAttribute="trailing" id="h0N-Sn-GPS"/>
                             <constraint firstItem="gWp-8d-tP7" firstAttribute="top" secondItem="0Bg-o1-AJi" secondAttribute="bottom" id="hPf-3U-Ycd"/>
                             <constraint firstItem="gWp-8d-tP7" firstAttribute="leading" secondItem="9Mx-MA-5gE" secondAttribute="leading" id="oym-VA-Eib"/>
@@ -397,6 +417,8 @@
                     <navigationItem key="navigationItem" id="AuW-w2-5NI"/>
                     <connections>
                         <outlet property="searchBar" destination="0Bg-o1-AJi" id="Y6V-UH-zi9"/>
+                        <outlet property="spinner" destination="ABE-ZH-EgI" id="wTp-2p-oqL"/>
+                        <outlet property="tableView" destination="gWp-8d-tP7" id="5Rw-uS-BeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7YY-7g-CuZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -527,6 +549,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="RoX-2e-a9Y"/>
         <segue reference="Nzz-7E-Nmh"/>
     </inferredMetricsTieBreakers>
 </document>

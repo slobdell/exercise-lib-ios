@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Exercise Library/FilterViewController.swift"
-            timestampString = "449630475.798808"
+            timestampString = "449679349.622467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "filterByExerciseType()"
             landmarkType = "5">
          </BreakpointContent>

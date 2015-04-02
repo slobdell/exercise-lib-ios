@@ -10,8 +10,10 @@ import UIKit
 
 class FinalTableViewController: UITableViewController {
     var muscleTree = []
+    var muscleName:NSString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = muscleName
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,8 +54,9 @@ class FinalTableViewController: UITableViewController {
             var view = self.view as UITableView
             var index = view.indexPathForSelectedRow()?.row
             let muscleId = self.muscleTree[index!][0] as Int
+            let muscleName = self.muscleTree[index!][1] as NSString
             destinationViewController.muscleId = muscleId
-            println("END")
+            destinationViewController.muscleName = muscleName
         }
         
     }

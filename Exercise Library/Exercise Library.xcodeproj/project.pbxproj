@@ -195,14 +195,14 @@
 		698547CF1AC5E3F400394DCD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				69DDF3DE1ACCBBF000701A72 /* EquipmentViewController.swift */,
 				69DDF38A1ACB656300701A72 /* ExerciseViewController.swift */,
+				695F4F101AC8A12700F14D75 /* FilterViewController.swift */,
 				69C8FE741AC8992A00B5767F /* FinalTableViewController.swift */,
 				696561361AC7935800870163 /* IntermediateTableViewController.swift */,
+				696561341AC60D5500870163 /* LoadingViewController.swift */,
 				698547D11AC5E58600394DCD /* MuscleBrowseTableViewController.swift */,
 				69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */,
-				696561341AC60D5500870163 /* LoadingViewController.swift */,
-				695F4F101AC8A12700F14D75 /* FilterViewController.swift */,
-				69DDF3DE1ACCBBF000701A72 /* EquipmentViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
