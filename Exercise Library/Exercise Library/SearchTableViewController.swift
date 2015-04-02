@@ -12,6 +12,7 @@ class SearchTableViewController: UIViewController {
 
     var junkItems = ["item1", "item2", "item3", "item4", "item5"]
     
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
