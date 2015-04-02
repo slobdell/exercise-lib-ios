@@ -28,6 +28,7 @@ class ExerciseViewController: UIViewController {
         // Do any additional setup after loading the view.
         var superHack:NSString? = exercise["video_id"] as? NSString
         if(superHack == nil){
+            spinner.hidden = true
             return
         }
         var videoId = exercise["video_id"] as NSString

@@ -16,6 +16,7 @@ class ExerciseLibraryClient {
     var accessSecret: String!
     var allData: NSDictionary = NSDictionary()
     var initialized: Bool = false
+    var availableEquipmentIds:[Int] = []
     
     init() {
         self.initialized = false
@@ -25,9 +26,53 @@ class ExerciseLibraryClient {
         return _ExerciseLibraryClientInstance
     }
 
+    func configureEquipmentIds(equipmentList:NSArray){
+
+        for equipmentDict in equipmentList{
+            self.availableEquipmentIds.append(equipmentDict["id"] as Int)
+        }
+    }
+    func filteredExercises() -> [NSDictionary]{
+        var filteredList:[NSDictionary] = []
+        for exerciseDict in (self.allData["exercises"] as [NSDictionary]){
+            var useExercise:Bool = true
+            for requiredEquipmentId in (exerciseDict["equipment_ids"] as [Int]){
+                if(find(self.availableEquipmentIds, requiredEquipmentId) == nil){
+                    useExercise = false
+                }
+            }
+            if(useExercise){
+                filteredList.append(exerciseDict)
+            }
+            
+        }
+        return filteredList
+    }
+    
+    func addEquipmentId(equipmentId:Int){
+
+        if (find(self.availableEquipmentIds, equipmentId) != nil){
+            println("shouldnt actually be reached")
+            return
+        }
+        self.availableEquipmentIds.append(equipmentId)
+    }
+    func removeEquipmentId(equipmentId:Int){
+        var removeIndex:Int = -1
+        for index in 0...self.availableEquipmentIds.count {
+            let currentId:Int = self.availableEquipmentIds[index]
+            if(currentId == equipmentId){
+                removeIndex = index
+                break
+            }
+        }
+        if(removeIndex != -1){
+            self.availableEquipmentIds.removeAtIndex(removeIndex)
+        }
+        
+    }
     // func fetch(callback: (a: Int) -> Void){
     func fetch(callback: () -> Void, errback: () -> Void) {
-        println("fetching")
         let manager = AFHTTPRequestOperationManager()
         manager.GET(
             "http://www.exercise-library.com/api/exercises/",
@@ -35,6 +80,7 @@ class ExerciseLibraryClient {
             success: { (operation: AFHTTPRequestOperation!,
                 responseObject: AnyObject!) in
                 self.allData = responseObject as NSDictionary
+                self.configureEquipmentIds(responseObject["equipment"] as NSArray)
                 self.initialized = true
                 callback()
             },

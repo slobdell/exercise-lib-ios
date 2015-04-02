@@ -46,12 +46,14 @@ class FinalTableViewController: UITableViewController {
         if(sender.tag == 99){
             super.prepareForSegue(segue, sender: sender)
         } else {
+            println("CP1")
             var destinationViewController:FilterViewController = segue.destinationViewController as FilterViewController
             
             var view = self.view as UITableView
             var index = view.indexPathForSelectedRow()?.row
             let muscleId = self.muscleTree[index!][0] as Int
             destinationViewController.muscleId = muscleId
+            println("END")
         }
         
     }

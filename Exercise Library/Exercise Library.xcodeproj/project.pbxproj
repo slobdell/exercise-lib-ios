@@ -24,6 +24,22 @@
 		69C8FE771AC899E600B5767F /* Muscle3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C8FE761AC899E600B5767F /* Muscle3TableViewCell.swift */; };
 		69DDF38B1ACB656300701A72 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDF38A1ACB656300701A72 /* ExerciseViewController.swift */; };
 		69DDF38E1ACC3DA000701A72 /* exerciselibcropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */; };
+		69DDF3C81ACC4D4D00701A72 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3BE1ACC4D4D00701A72 /* icon-29.png */; };
+		69DDF3C91ACC4D4D00701A72 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3BF1ACC4D4D00701A72 /* icon-29@2x.png */; };
+		69DDF3CA1ACC4D4D00701A72 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C01ACC4D4D00701A72 /* icon-29@3x.png */; };
+		69DDF3CB1ACC4D4D00701A72 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C11ACC4D4D00701A72 /* icon-40.png */; };
+		69DDF3CC1ACC4D4D00701A72 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C21ACC4D4D00701A72 /* icon-40@2x.png */; };
+		69DDF3CD1ACC4D4D00701A72 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C31ACC4D4D00701A72 /* icon-40@3x.png */; };
+		69DDF3CE1ACC4D4D00701A72 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C41ACC4D4D00701A72 /* icon-60@2x.png */; };
+		69DDF3CF1ACC4D4D00701A72 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C51ACC4D4D00701A72 /* icon-60@3x.png */; };
+		69DDF3D01ACC4D4D00701A72 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C61ACC4D4D00701A72 /* icon-76.png */; };
+		69DDF3D11ACC4D4D00701A72 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3C71ACC4D4D00701A72 /* icon-76@2x.png */; };
+		69DDF3DA1ACC54BB00701A72 /* browse-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3D61ACC54BB00701A72 /* browse-icon.png */; };
+		69DDF3DB1ACC54BB00701A72 /* browse-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3D71ACC54BB00701A72 /* browse-icon@2x.png */; };
+		69DDF3DC1ACC54BB00701A72 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3D81ACC54BB00701A72 /* settings-icon.png */; };
+		69DDF3DD1ACC54BB00701A72 /* settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69DDF3D91ACC54BB00701A72 /* settings-icon@2x.png */; };
+		69DDF3DF1ACCBBF000701A72 /* EquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDF3DE1ACCBBF000701A72 /* EquipmentViewController.swift */; };
+		69DDF3E11ACCBD0900701A72 /* EquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDF3E01ACCBD0900701A72 /* EquipmentTableViewCell.swift */; };
 		69F44E281AC5EDDC003B7832 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F44E271AC5EDDC003B7832 /* SearchResultTableViewCell.swift */; };
 		69F44E2A1AC5EE85003B7832 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */; };
 		7FA08E396606A0D83D80FC89 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8EC57F08583B1B55BC9074 /* libPods.a */; };
@@ -64,6 +80,22 @@
 		69C8FE761AC899E600B5767F /* Muscle3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Muscle3TableViewCell.swift; sourceTree = "<group>"; };
 		69DDF38A1ACB656300701A72 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exerciselibcropped.png; path = ../../../../Dropbox/WorkoutGen_Stuff/logos/exerciselibcropped.png; sourceTree = "<group>"; };
+		69DDF3BE1ACC4D4D00701A72 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-29.png"; sourceTree = "<group>"; };
+		69DDF3BF1ACC4D4D00701A72 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-29@2x.png"; sourceTree = "<group>"; };
+		69DDF3C01ACC4D4D00701A72 /* icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-29@3x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-29@3x.png"; sourceTree = "<group>"; };
+		69DDF3C11ACC4D4D00701A72 /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-40.png"; sourceTree = "<group>"; };
+		69DDF3C21ACC4D4D00701A72 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-40@2x.png"; sourceTree = "<group>"; };
+		69DDF3C31ACC4D4D00701A72 /* icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@3x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-40@3x.png"; sourceTree = "<group>"; };
+		69DDF3C41ACC4D4D00701A72 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-60@2x.png"; sourceTree = "<group>"; };
+		69DDF3C51ACC4D4D00701A72 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@3x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-60@3x.png"; sourceTree = "<group>"; };
+		69DDF3C61ACC4D4D00701A72 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-76.png"; sourceTree = "<group>"; };
+		69DDF3C71ACC4D4D00701A72 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/iOS Icons/icon-76@2x.png"; sourceTree = "<group>"; };
+		69DDF3D61ACC54BB00701A72 /* browse-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "browse-icon.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/browse-icon.png"; sourceTree = "<group>"; };
+		69DDF3D71ACC54BB00701A72 /* browse-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "browse-icon@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/browse-icon@2x.png"; sourceTree = "<group>"; };
+		69DDF3D81ACC54BB00701A72 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-icon.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/settings-icon.png"; sourceTree = "<group>"; };
+		69DDF3D91ACC54BB00701A72 /* settings-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-icon@2x.png"; path = "../../../../Dropbox/WorkoutGen_Stuff/logos/settings-icon@2x.png"; sourceTree = "<group>"; };
+		69DDF3DE1ACCBBF000701A72 /* EquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentViewController.swift; sourceTree = "<group>"; };
+		69DDF3E01ACCBD0900701A72 /* EquipmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentTableViewCell.swift; sourceTree = "<group>"; };
 		69F44E271AC5EDDC003B7832 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		6C8EC57F08583B1B55BC9074 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +200,7 @@
 				69F44E291AC5EE85003B7832 /* SearchTableViewController.swift */,
 				696561341AC60D5500870163 /* LoadingViewController.swift */,
 				695F4F101AC8A12700F14D75 /* FilterViewController.swift */,
+				69DDF3DE1ACCBBF000701A72 /* EquipmentViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +213,7 @@
 				69C8FE761AC899E600B5767F /* Muscle3TableViewCell.swift */,
 				69F44E271AC5EDDC003B7832 /* SearchResultTableViewCell.swift */,
 				695F4F121AC8AAA800F14D75 /* ExerciseTableViewCell.swift */,
+				69DDF3E01ACCBD0900701A72 /* EquipmentTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -187,9 +221,31 @@
 		69DDF38C1ACC3D8100701A72 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				69DDF3D61ACC54BB00701A72 /* browse-icon.png */,
+				69DDF3D71ACC54BB00701A72 /* browse-icon@2x.png */,
+				69DDF3D81ACC54BB00701A72 /* settings-icon.png */,
+				69DDF3D91ACC54BB00701A72 /* settings-icon@2x.png */,
+				69DDF3951ACC42D000701A72 /* icons */,
 				69DDF38D1ACC3DA000701A72 /* exerciselibcropped.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		69DDF3951ACC42D000701A72 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				69DDF3BE1ACC4D4D00701A72 /* icon-29.png */,
+				69DDF3BF1ACC4D4D00701A72 /* icon-29@2x.png */,
+				69DDF3C01ACC4D4D00701A72 /* icon-29@3x.png */,
+				69DDF3C11ACC4D4D00701A72 /* icon-40.png */,
+				69DDF3C21ACC4D4D00701A72 /* icon-40@2x.png */,
+				69DDF3C31ACC4D4D00701A72 /* icon-40@3x.png */,
+				69DDF3C41ACC4D4D00701A72 /* icon-60@2x.png */,
+				69DDF3C51ACC4D4D00701A72 /* icon-60@3x.png */,
+				69DDF3C61ACC4D4D00701A72 /* icon-76.png */,
+				69DDF3C71ACC4D4D00701A72 /* icon-76@2x.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 		6E9CBF07F894E643461ADF80 /* Pods */ = {
@@ -291,10 +347,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DDF3CB1ACC4D4D00701A72 /* icon-40.png in Resources */,
+				69DDF3CE1ACC4D4D00701A72 /* icon-60@2x.png in Resources */,
+				69DDF3C91ACC4D4D00701A72 /* icon-29@2x.png in Resources */,
+				69DDF3CC1ACC4D4D00701A72 /* icon-40@2x.png in Resources */,
+				69DDF3CF1ACC4D4D00701A72 /* icon-60@3x.png in Resources */,
 				698547B51AC5E3B600394DCD /* Main.storyboard in Resources */,
+				69DDF3CD1ACC4D4D00701A72 /* icon-40@3x.png in Resources */,
+				69DDF3DB1ACC54BB00701A72 /* browse-icon@2x.png in Resources */,
+				69DDF3CA1ACC4D4D00701A72 /* icon-29@3x.png in Resources */,
 				69DDF38E1ACC3DA000701A72 /* exerciselibcropped.png in Resources */,
 				698547BA1AC5E3B600394DCD /* LaunchScreen.xib in Resources */,
+				69DDF3DC1ACC54BB00701A72 /* settings-icon.png in Resources */,
+				69DDF3C81ACC4D4D00701A72 /* icon-29.png in Resources */,
 				698547B71AC5E3B600394DCD /* Images.xcassets in Resources */,
+				69DDF3DD1ACC54BB00701A72 /* settings-icon@2x.png in Resources */,
+				69DDF3D11ACC4D4D00701A72 /* icon-76@2x.png in Resources */,
+				69DDF3D01ACC4D4D00701A72 /* icon-76.png in Resources */,
+				69DDF3DA1ACC54BB00701A72 /* browse-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +417,7 @@
 			files = (
 				696561351AC60D5500870163 /* LoadingViewController.swift in Sources */,
 				69C8FE771AC899E600B5767F /* Muscle3TableViewCell.swift in Sources */,
+				69DDF3E11ACCBD0900701A72 /* EquipmentTableViewCell.swift in Sources */,
 				698547D41AC5E5EE00394DCD /* MuscleTableViewCell.swift in Sources */,
 				696561371AC7935800870163 /* IntermediateTableViewController.swift in Sources */,
 				698547D21AC5E58600394DCD /* MuscleBrowseTableViewController.swift in Sources */,
@@ -359,6 +430,7 @@
 				693328EF1AC5F45A0008895D /* ExerciseLibraryClient.swift in Sources */,
 				698547B01AC5E3B600394DCD /* AppDelegate.swift in Sources */,
 				696561391AC7B34900870163 /* Muscle2TableViewCell.swift in Sources */,
+				69DDF3DF1ACCBBF000701A72 /* EquipmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

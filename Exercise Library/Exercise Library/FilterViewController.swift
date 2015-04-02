@@ -19,6 +19,17 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerciseTypeFilter: UISegmentedControl!
     override func viewDidLoad() {
+        self.buildExerciseList()
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "buildExerciseList",
+            name: "filterApplied",
+            object: nil)
+
+    }
+
+    func buildExerciseList(){
         exerciseTypeFilter.removeAllSegments()
         var client = ExerciseLibraryClient.sharedInstance
         var exerciseTypes = client.allData["exercise_types"] as NSArray
@@ -31,7 +42,7 @@ class FilterViewController: UIViewController {
         }
         
         self.baseMuscleList = [] // SBL not sure if this is necessary
-        for exercise in client.allData["exercises"] as NSArray{
+        for exercise in client.filteredExercises(){
             var exercise = exercise as NSDictionary
             if(exercise["muscle_group_id"] as Int == self.muscleId){
                 self.baseMuscleList.append(exercise)
@@ -40,9 +51,9 @@ class FilterViewController: UIViewController {
                     exerciseTypesPresent[exerciseTypeId] = true
                 }
             }
-
+            
         }
-
+        
         for exerciseTypeDict in exerciseTypes{
             var exerciseTypeDict = exerciseTypeDict as NSDictionary
             var id = exerciseTypeDict["id"] as Int
@@ -50,7 +61,7 @@ class FilterViewController: UIViewController {
                 var title = exerciseTypeDict["title"] as NSString
                 exerciseTypeFilter.insertSegmentWithTitle(title, atIndex: id, animated: false)
             }
-
+            
         }
         
         func alphabetize(this:NSDictionary, that:NSDictionary) -> Bool {
@@ -60,7 +71,7 @@ class FilterViewController: UIViewController {
             
         }
         self.baseMuscleList.sort(alphabetize)
-
+        
         
         super.viewDidLoad()
         exerciseTypeFilter.selectedSegmentIndex = 0
@@ -68,6 +79,10 @@ class FilterViewController: UIViewController {
     }
     
     func filterByExerciseType(){
+
+        if(exerciseTypeFilter.numberOfSegments == 0){
+            return
+        }
         var exerciseTypeTitle = exerciseTypeFilter.titleForSegmentAtIndex(exerciseTypeFilter.selectedSegmentIndex)
         var client = ExerciseLibraryClient.sharedInstance
         var exerciseTypes = client.allData["exercise_types"] as NSArray
@@ -86,7 +101,6 @@ class FilterViewController: UIViewController {
             }
         }
         self.viewableList = filteredList
-        println(self.viewableList.count)
         self.tableView.reloadData()
     }
     

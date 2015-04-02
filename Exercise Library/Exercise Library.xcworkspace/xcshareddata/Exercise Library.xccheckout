@@ -22,7 +22,7 @@
 		<key>C1AF22525B703090C0315158D0D441622B5ED9BB</key>
 		<string>../..</string>
 		<key>C4C671648CAA3C24F5D85D9ED0D0D4DA129E9CF9</key>
-		<string>../../../../Dropbox</string>
+		<string>../../../Dropbox</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/slobdell/exercise-lib-ios.git</string>
