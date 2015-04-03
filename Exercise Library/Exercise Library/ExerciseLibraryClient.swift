@@ -52,7 +52,6 @@ class ExerciseLibraryClient {
     func addEquipmentId(equipmentId:Int){
 
         if (find(self.availableEquipmentIds, equipmentId) != nil){
-            println("shouldnt actually be reached")
             return
         }
         self.availableEquipmentIds.append(equipmentId)

@@ -23,7 +23,7 @@ class SearchTableViewController: UIViewController,UISearchBarDelegate {
         textDidChange searchText: String){
             
             //http://exercise-library.herokuapp.com/api/autocomplete/?q=test
-            self.search(searchText)
+            self.search(searchText.lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "%20") )
     }
     
     func search(searchText:NSString) {

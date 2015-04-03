@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Exercise Library/EquipmentTableViewCell.swift"
-            timestampString = "449630475.798808"
+            timestampString = "449682355.497894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "insaneHack(_:)"
             landmarkType = "5">
             <Locations>

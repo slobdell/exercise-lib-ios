@@ -44,7 +44,6 @@ class EquipmentTableViewCell: UITableViewCell {
         imageThumbnail.layer.masksToBounds = true
         
         let url = self.insaneHack(result["image"] as NSString)
-        println(url)
         self.imageThumbnail.contentMode = UIViewContentMode.ScaleAspectFit
         if let checkedUrl = NSURL(string: url){
             downloadImage(checkedUrl)

@@ -108,8 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-yx-c8G">
-                                <rect key="frame" x="0.0" y="128" width="320" height="440"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-yx-c8G">
+                                <rect key="frame" x="0.0" y="102" width="320" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exerciseTableViewCell" id="5zj-fU-ZB5" customClass="ExerciseTableViewCell" customModule="Exercise_Library" customModuleProvider="target">
@@ -160,6 +160,7 @@
                             <constraint firstItem="GYi-0b-qzE" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" constant="5" id="93V-8F-ORc"/>
                             <constraint firstItem="VL2-yx-c8G" firstAttribute="leading" secondItem="fTS-Nd-SmX" secondAttribute="leading" id="Dgl-e7-sfz"/>
                             <constraint firstAttribute="trailing" secondItem="VL2-yx-c8G" secondAttribute="trailing" id="JWQ-IH-aMx"/>
+                            <constraint firstItem="VL2-yx-c8G" firstAttribute="top" secondItem="GYi-0b-qzE" secondAttribute="bottom" id="WxI-Im-eJd"/>
                             <constraint firstAttribute="centerX" secondItem="GYi-0b-qzE" secondAttribute="centerX" id="hao-HY-1VI"/>
                             <constraint firstAttribute="trailing" secondItem="GYi-0b-qzE" secondAttribute="trailing" constant="5" id="oTL-3G-WTY"/>
                             <constraint firstItem="I7S-b0-ZHl" firstAttribute="top" secondItem="VL2-yx-c8G" secondAttribute="bottom" id="y7y-Ej-FxE"/>
@@ -309,7 +310,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xw-tV-4MT">
                                 <rect key="frame" x="100" y="164" width="121" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.011788656142404319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Retry">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -447,12 +448,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z4r-li-dAI" id="yLh-Ld-Q3W">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaL-dr-0Uu">
-                                                    <rect key="frame" x="257" y="6" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="switchChanged:" destination="z4r-li-dAI" eventType="valueChanged" id="Sej-fG-Fgv"/>
-                                                    </connections>
-                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipment Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZA-t2-cGO">
+                                                    <rect key="frame" x="56" y="12" width="193" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlU-Xa-4wO">
                                                     <rect key="frame" x="8" y="2" width="40" height="40"/>
                                                     <constraints>
@@ -460,15 +461,16 @@
                                                         <constraint firstAttribute="width" constant="40" id="SBH-3s-Yr3"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipment Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZA-t2-cGO">
-                                                    <rect key="frame" x="56" y="12" width="193" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaL-dr-0Uu">
+                                                    <rect key="frame" x="263" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="z4r-li-dAI" eventType="valueChanged" id="Sej-fG-Fgv"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="JlU-Xa-4wO" firstAttribute="leading" secondItem="yLh-Ld-Q3W" secondAttribute="leading" constant="5" id="Mtm-Vs-xcv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TaL-dr-0Uu" secondAttribute="trailing" id="zkK-ZF-FkP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

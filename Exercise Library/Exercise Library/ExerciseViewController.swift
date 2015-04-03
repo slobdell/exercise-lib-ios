@@ -9,6 +9,8 @@
 import UIKit
 import MediaPlayer
 
+
+
 class ExerciseViewController: UIViewController {
 
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -34,9 +36,10 @@ class ExerciseViewController: UIViewController {
         var videoId = exercise["video_id"] as NSString
         var urlString:NSString = "https://s3-us-west-1.amazonaws.com/workout-generator-exercises/smaller_mp4/small_\(videoId).mp4"
         var url:NSURL? = NSURL(string: urlString)
-        println(url)
+
         self.moviePlayer = MPMoviePlayerController(contentURL: url)
         moviePlayer.view.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
+
 
         moviePlayer.repeatMode = MPMovieRepeatMode.One
         

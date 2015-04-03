@@ -14,8 +14,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sI-c6-gu0">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="exerciselibcropped.png" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-Ei-f8U">
-                            <rect key="frame" x="85" y="27" width="300" height="300"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exerciselibcropped.png" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-Ei-f8U">
+                            <rect key="frame" x="90" y="90" width="300" height="300"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="PN8-bP-s7y"/>
                                 <constraint firstAttribute="height" constant="300" id="pTs-vP-pfr"/>
